@@ -1,0 +1,13 @@
+version: '3'
+services:
+  nginx-rtmp:
+    build:
+      context: .
+    container_name: streaming_nginx
+
+    ports:
+      - 1935:1935
+      - 8080:80
+
+    volumes:
+      - "./video:/usr/share/nginx/html"
