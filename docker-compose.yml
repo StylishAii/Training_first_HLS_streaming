@@ -10,4 +10,7 @@ services:
       - 8080:80
 
     volumes:
-      - "./video:/usr/share/nginx/html"
+      - "./video:/usr/share/nginx/html/video"
+      - "./video:/opt/data/video"
+      - "./src/index.html:/usr/share/nginx/html/video/index.html"
+      - "./src/index.html:/opt/data/video/index.html"
