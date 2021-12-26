@@ -12,5 +12,4 @@ services:
     volumes:
       - "./video:/usr/share/nginx/html/video"
       - "./video:/opt/data/video"
-      - "./src/index.html:/usr/share/nginx/html/video/index.html"
-      - "./src/index.html:/opt/data/video/index.html"
+      - "./dist:/usr/share/nginx/html"

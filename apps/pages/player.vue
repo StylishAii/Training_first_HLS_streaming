@@ -1,0 +1,69 @@
+<template>
+    <div class="container">
+        <vs-row>
+            <vs-col vs-type="flex" vs-justify="center" vs-align="center" vs-w="12">
+                テキスト
+            </vs-col>
+        </vs-row>
+        <vs-row>
+            <vs-col vs-type="flex" vs-justify="center" vs-align="center" vs-w="4">
+                テキスト2
+            </vs-col>
+            <vs-col vs-type="flex" vs-justify="center" vs-align="center" vs-w="4">
+                テキスト3
+            </vs-col>
+            <vs-col vs-type="flex" vs-justify="center" vs-align="center" vs-w="4">
+                {{ $route.query.url }}
+            </vs-col>
+        </vs-row>
+        <vs-row>
+            <h1>hls.js player</h1>
+            <div class="video-wrapper">
+                <video id="video" controls></video>
+            </div> 
+        </vs-row>
+    </div>
+</template>
+<script>
+import Hls from 'hls.js';
+export default {
+    name: 'player',
+    head() {
+        return {
+            script: [
+                { src:"https://cdn.jsdelivr.net/npm/hls.js@latest", async: true, delay: true, body: true }
+            ]
+        }
+    },
+    mounted() {
+        var url = "http://localhost:8080/video/mio/mio.m3u8"
+        if (Hls.isSupported()) {
+            var video = document.getElementById('video');
+            var hls = new Hls();
+            hls.attachMedia(video);
+            hls.on(Hls.Events.MEDIA_ATTACHED, () => {
+                hls.loadSource(url);
+                hls.on(Hls.Events.MANIFEST_PARSED, (event, data) => {})
+            })
+        }
+    }
+}
+</script>
+<style scoped>
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .video-wrapper {
+        padding-top: 20px;
+        height: 80%;
+        margin: 0 auto;
+    }
+
+    video {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+</style>
