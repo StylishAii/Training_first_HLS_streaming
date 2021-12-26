@@ -28,15 +28,9 @@
 import Hls from 'hls.js';
 export default {
     name: 'player',
-    head() {
-        return {
-            script: [
-                { src:"https://cdn.jsdelivr.net/npm/hls.js@latest", async: true, delay: true, body: true }
-            ]
-        }
-    },
+
     mounted() {
-        var url = "http://localhost:8080/video/mio/mio.m3u8"
+        var url = "/video/mio/mio.m3u8"
         if (Hls.isSupported()) {
             var video = document.getElementById('video');
             var hls = new Hls();
