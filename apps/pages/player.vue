@@ -30,7 +30,7 @@ export default {
     name: 'player',
 
     mounted() {
-        var url = "/video/mio/mio.m3u8"
+        var url = "/video/" + this.$route.query.url + "/video.m3u8"
         if (Hls.isSupported()) {
             var video = document.getElementById('video');
             var hls = new Hls();

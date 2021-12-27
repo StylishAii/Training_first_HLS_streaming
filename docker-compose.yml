@@ -10,6 +10,6 @@ services:
       - 8080:80
 
     volumes:
-      - "./video:/usr/share/nginx/html/video"
-      - "./video:/opt/data/video"
+      - "/Volumes/USB DISK/video:/usr/share/nginx/html/video"
+      # - "./video:/opt/data/video"
       # - "./dist:/usr/share/nginx/html"
