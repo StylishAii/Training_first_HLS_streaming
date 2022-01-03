@@ -1,26 +1,21 @@
 <template>
     <div class="container">
         <vs-row>
-            <vs-col vs-type="flex" vs-justify="center" vs-align="center" vs-w="12">
+            <vs-col vs-type="flex" vs-justify="center" vs-align="center" vs-w="4">
                 テキスト
             </vs-col>
         </vs-row>
         <vs-row>
-            <vs-col vs-type="flex" vs-justify="center" vs-align="center" vs-w="4">
-                テキスト2
-            </vs-col>
-            <vs-col vs-type="flex" vs-justify="center" vs-align="center" vs-w="4">
-                テキスト3
-            </vs-col>
-            <vs-col vs-type="flex" vs-justify="center" vs-align="center" vs-w="4">
-                {{ $route.query.url }}
+            <vs-col vs-type="flex" vs-justify="center" vs-align="center" vs-w="12">
+                <h1>{{ $route.query.url }}</h1>
             </vs-col>
         </vs-row>
         <vs-row>
-            <h1>hls.js player</h1>
-            <div class="video-wrapper">
-                <video id="video" controls></video>
-            </div> 
+            <vs-col vs-type="flex" vs-justify="center" vs-w="12">
+                <div class="video-wrapper">
+                    <video id="video" controls></video>
+                </div> 
+            </vs-col>
         </vs-row>
     </div>
 </template>
@@ -30,7 +25,7 @@ export default {
     name: 'player',
 
     mounted() {
-        var url = "/video/" + this.$route.query.url + "/video.m3u8"
+        var url = "/video/" + this.$route.query.url + "/video.m3u8";
         if (Hls.isSupported()) {
             var video = document.getElementById('video');
             var hls = new Hls();
