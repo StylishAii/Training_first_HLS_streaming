@@ -11,5 +11,6 @@ services:
 
     volumes:
       - "/Volumes/USB DISK/video:/usr/share/nginx/html/video"
+      - "/Volumes/USB DISK/thumbnail:/usr/share/nginx/html/img"
       # - "./video:/opt/data/video"
       # - "./dist:/usr/share/nginx/html"
