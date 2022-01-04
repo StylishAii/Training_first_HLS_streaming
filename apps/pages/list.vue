@@ -31,6 +31,7 @@ export default {
 }
 </script>
 <style>
+
 .cardx {
     text-decoration: none;
     color: #020339;

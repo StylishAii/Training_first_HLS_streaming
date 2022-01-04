@@ -20,5 +20,7 @@
     "vuesax": "^3.12.2",
     "webpack": "^4.46.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "video.js": "^7.17.0"
+  }
 }
