@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
+    "@videojs/themes": "^1.0.1",
     "core-js": "^3.19.3",
     "material-icons": "^1.10.4",
     "nuxt": "^2.15.8",

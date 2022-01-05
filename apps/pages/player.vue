@@ -11,9 +11,9 @@
             </vs-col>
         </vs-row>
         <vs-row>
-            <vs-col vs-type="flex" vs-justify="center" vs-w="12">
+            <vs-col vs-type="flex" vs-justify="center" vs-align="center" vs-w="12">
                 <div class="video-wrapper">
-                    <video ref="videoPlayer" class="video-js" playsinline>
+                    <video ref="videoPlayer" class="video-js vjs-theme-fantasy" playsinline width="300">
                         <source id="video-m3u8" type="application/x-mpegURL" />
                     </video>
                 </div> 
@@ -23,7 +23,8 @@
 </template>
 <script>
 import videojs from 'video.js';
-import "video.js/dist/video-js.css"
+import "video.js/dist/video-js.css";
+import '@videojs/themes/dist/fantasy/index.css';
 
 export default {
     name: 'player',
@@ -52,19 +53,24 @@ export default {
 </script>
 <style scoped>
 .container {
-    width: 80%;
+    width: 80vw;
     margin: 0 auto;
 }
 
 .video-wrapper {
     padding-top: 20px;
-    height: 80%;
+    /* height: 80%; */
+    width: 80vw;
     margin: 0 auto;
 }
 
-video {
-    display: block;
-    width: 100%;
-    height: 100%;
+.video-wrapper video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 80%;
+    height: 80%;
+    /* height: 100%; */
 }
 </style>
