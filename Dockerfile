@@ -3,7 +3,7 @@ FROM node:16-alpine as webapp
 WORKDIR /apps
 
 COPY /apps /apps
-RUN yarn install
+RUN yarn install --network-timeout 1000000
 RUN yarn generate
 
 
