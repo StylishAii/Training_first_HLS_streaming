@@ -22,7 +22,6 @@
     </div>
 </template>
 <script>
-import Hls from 'hls.js';
 import videojs from 'video.js';
 import "video.js/dist/video-js.css"
 
@@ -37,15 +36,6 @@ export default {
 
     mounted() {
         var url = "/video/" + this.$route.query.url + "/video.m3u8";
-        // if (Hls.isSupported()) {
-        //     var video = document.getElementById('video');
-        //     var hls = new Hls();
-        //     hls.attachMedia(video);
-        //     hls.on(Hls.Events.MEDIA_ATTACHED, () => {
-        //         hls.loadSource(url);
-        //         hls.on(Hls.Events.MANIFEST_PARSED, (event, data) => {})
-        //     })
-        // };
 
         var video = document.getElementById('video-m3u8');
         video.src = url
