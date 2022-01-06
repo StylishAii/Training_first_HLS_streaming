@@ -13,7 +13,7 @@
         <vs-row>
             <vs-col vs-type="flex" vs-justify="center" vs-align="center" vs-w="12">
                 <div class="video-wrapper">
-                    <video ref="videoPlayer" class="video-js vjs-theme-fantasy" playsinline width="300">
+                    <video ref="videoPlayer" class="video-js vjs-theme-fantasy" playsinline width="500">
                         <source id="video-m3u8" type="application/x-mpegURL" />
                     </video>
                 </div> 

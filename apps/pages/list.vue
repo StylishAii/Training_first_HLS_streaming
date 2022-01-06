@@ -22,11 +22,7 @@ export default {
     data() {
         return {
             items: [
-                {id:1, title: "ナースさん", url: "/player/?url=mio", src: "/img/mio/0018.png"},
-                {id:2, title: "援交かわいい", url: "/player/?url=cdefg", src: "/img/cdefg/0018.png"},
-                {id:3, title: "あやちゃん②", url: "/player/?url=aya", src: "/img/aya/0018.png"},
-                {id:4, title: "愛乃まほろ ニット", url: "/player/?url=nti_bakunew", src: "/img/nti_bakunew/0018.png"},
-                {id:5, title: "OL かわいい 無修正", url: "/player/?url=anmp", src: "/img/anmp/0018.png"},
+                {id:1, title: "Example", url: "/player/?url=example", src: "/img/example/0001.png"}
             ]
         }
     }

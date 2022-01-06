@@ -24,3 +24,7 @@
 # FILENAME : 任意のファイル名に置き換え
 $ ffmpeg -i FILENAME.mp4 -codec copy -map 0 -f segment -vbsf h264_mp4toannexb -segment_format mpegts -segment_time 10 -segment_list FILENAME/video.m3u8 FILENAME/video-%03d.ts
 ```
+
+## 動画素材参考サイト
+
+- [Free Stock Video Footage](https://www.videvo.net/)
