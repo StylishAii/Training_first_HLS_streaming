@@ -16,5 +16,5 @@
 # mp4 → 100秒ごとの画像抽出
 
 ```bash
-ffmpeg -i FILENAME.mp4 -r 0.01 ./thumbnail/FILENAME/%04d.png
+$ ffmpeg -i FILENAME.mp4 -r 0.01 ./thumbnail/FILENAME/%04d.png
 ```

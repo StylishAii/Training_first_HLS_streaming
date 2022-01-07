@@ -1,11 +1,6 @@
 <template>
     <div class="container">
         <vs-row>
-            <vs-col vs-type="flex" vs-justify="center" vs-align="center" vs-w="4">
-                テキスト
-            </vs-col>
-        </vs-row>
-        <vs-row>
             <vs-col vs-type="flex" vs-justify="center" vs-align="center" vs-w="12">
                 <h1>{{ $route.query.url }}</h1>
             </vs-col>
