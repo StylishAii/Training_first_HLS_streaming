@@ -2,13 +2,14 @@
     <div class="container">
         <vs-row>
             <vs-col vs-type="flex" vs-justify="center" vs-align="center" vs-w="12">
-                <h1>{{ $route.query.url }}</h1>
+                <h1>{{ $route.query.url }}</h1><br />
+                <h2>{{windowWidth}}</h2>
             </vs-col>
         </vs-row>
         <vs-row>
             <vs-col vs-type="flex" vs-justify="center" vs-align="center" vs-w="12">
                 <div class="video-wrapper">
-                    <video ref="videoPlayer" class="video-js vjs-theme-fantasy" playsinline width="500">
+                    <video id="player" ref="videoPlayer" class="video-js vjs-theme-fantasy" playsinline >
                         <source id="video-m3u8" type="application/x-mpegURL" />
                     </video>
                 </div> 
@@ -31,12 +32,19 @@ export default {
     },
 
     mounted() {
+
+        // レンダリング時に、windowサイズを元に計算
+        var wrapper = document.getElementById('player');
+        wrapper.width = window.innerWidth * 0.8;
+
+
         var url = "/video/" + this.$route.query.url + "/video.m3u8";
 
         var video = document.getElementById('video-m3u8');
         video.src = url
 
         this.player = videojs(this.$refs.videoPlayer, {autoPlay: true, controls: true}, () => {console.log('onPlayerReady')});
+
     },
 
     beforeDestroy() {
