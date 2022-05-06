@@ -2,7 +2,7 @@
     <div class="container">
         <vs-row vs-justify="center">
             <vs-col class="card_row" type="flex" vs-justify="center" vs-w="3" vs-sm="6" vs-xs="12" v-for="item in this.shuffle(items)" :key="item.item">
-                <nuxt-link :to="item.url">
+                <nuxt-link :to="item.url" target="_blank">
                     <vs-card class="cardx">
                         <div slot="header"><h3>{{item.title}}</h3></div>
                         <div slot="media">
